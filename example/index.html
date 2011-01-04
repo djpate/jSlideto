@@ -7,19 +7,19 @@
 		<script>
 			$(document).ready(function(){
 				$("#default").click(function(){
-					$("#title4").slideto();
+					$("#title3").slideto();
 				});
 				
 				$("#nohighlight").click(function(){
-					$("#title4").slideto({highlight: false});
+					$("#title3").slideto({highlight: false});
 				});
 				
 				$("#redhighlight").click(function(){
-					$("#title4").slideto({highlight_color: 'red',highlight_duration: 'slow'});
+					$("#title3").slideto({highlight_color: 'red',highlight_duration: '5000'});
 				});
 				
 				$("#alloptions").click(function(){
-					$("#title4").slideto({highlight_color: 'blue',highlight_duration: 'slow',slide_duration: "fast"});
+					$("#title3").slideto({highlight_color: 'blue',highlight_duration: 'slow',slide_duration: "500"});
 				});
 			});
 		</script>
@@ -32,24 +32,24 @@
 	</style>
 	<body>
 		<h1>Default example</h1>
-			<pre>$("#title4").slideto();</pre>
+			<pre>$("#title3").slideto();</pre>
 			<button id="default">Try it</button>
 		<h1>No highlight</h1>
-			<pre>$("#title4").slideto({
+			<pre>$("#title3").slideto({
 	highlight: false
 });</pre>
 			<button id="nohighlight">Try it</button>
-		<h1>Red & slow highlight</h1>
-		<pre>$("#title4").slideto({
+		<h1>Red & long highlight</h1>
+		<pre>$("#title3").slideto({
 	highlight_color: 'red',
-	highlight_duration : 'slow'
+	highlight_duration : '5000'
 });</pre>
 			<button id="redhighlight">Try it</button>
-		<h1>All options</h1>
-		<pre>$("#title4").slideto({
+		<h1>All options (blue & short)</h1>
+		<pre>$("#title3").slideto({
 	highlight_color: 'blue',
 	highlight_duration : 'slow',
-	slide_duration : 'fast'
+	slide_duration : '500'
 });</pre>
 			<button id="alloptions">Try it</button>
 		<div id="title1">
