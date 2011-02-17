@@ -30,11 +30,16 @@
 
 		return this.each(function() {
 			
+			var callback = false;
+			
 			obj = $(this);
 			
-			$('html').animate({scrollTop: obj.offset().top},options.duration,function(){
-				if(options.highlight  && $.ui.version){
-					obj.effect("highlight", {'color': options.highlight_color}, options.highlight_duration);
+			$('html,body').animate({scrollTop: obj.offset().top},options.duration,function(){
+				if(callback == false){
+					if(options.highlight  && $.ui.version){
+						obj.effect("highlight", {'color': options.highlight_color}, options.highlight_duration);
+					}
+					callback = true;
 				}
 			});
 			
