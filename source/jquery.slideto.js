@@ -34,7 +34,7 @@
 			
 			obj = $(this);
 			
-			$('html,body').animate({scrollTop: obj.offset().top},options.duration,function(){
+			$('html,body').animate({scrollTop: obj.offset().top},options.slide_duration,function(){
 				if(callback == false){
 					if(options.highlight  && $.ui.version){
 						obj.effect("highlight", {'color': options.highlight_color}, options.highlight_duration);
